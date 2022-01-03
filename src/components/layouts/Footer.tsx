@@ -1,8 +1,15 @@
 import React from "react"
+import { useLocation } from "react-router-dom"
 
 const Footer: React.FC = function () {
+    const { pathname } = useLocation()
+
     return (
-        <footer className="flex flex-row justify-center text-xs text-footer mt-4">
+        <footer
+            className={`flex flex-row justify-center text-xs text-footer my-4  ${
+                pathname === "/" ? "hidden" : ""
+            }`}
+        >
             All Rights Reserved C 2021 Chee Chong
         </footer>
     )

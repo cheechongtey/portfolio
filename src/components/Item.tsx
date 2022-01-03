@@ -1,32 +1,29 @@
 import React from "react"
+import images1080 from "../images/1080"
+import images768 from "../images/768"
+import { iProjectProps } from "../interface"
 
-interface ItemProps {
-    imagePosition: "left" | "right"
-    title: string
-    desc: string
-    image: string
-    list: string[]
-    url: string
-}
-
-const Item: React.FC<ItemProps> = function ({
+const Item: React.FC<iProjectProps> = function ({
     title,
     desc,
-    imagePosition,
     image,
     list,
     url,
+    delay,
 }) {
     return (
-        <div className="flex flex-wrap-reverse mb-20 md:mb-32 justify-between">
-            <div className="w-full md:w-6/12 text-left px-5 flex flex-col">
-                <div className="project-title mt-5 mb-2 md:my-5 italic text-2xl md:text-4xl font-semibold">
+        <div
+            className="items flex flex-wrap-reverse mb-20 lg:mb-32 justify-between"
+            data-delay={delay}
+        >
+            <div className="w-full lg:w-5/12 text-leftflex flex-col">
+                <div className="project-title mt-5 mb-2 lg:my-5 italic text-2xl lg:text-4xl font-semibold">
                     {title}
                 </div>
-                <div className="project-desc text-md md:text-lg font-firacode text-justify mb-5">
+                <div className="project-desc text-md lg:text-lg font-firacode text-justify mb-5">
                     {desc}
                 </div>
-                <div className="project-responsible text-md md:text-lg font-firacode text-justify pl-8 mb-5">
+                <div className="project-responsible text-md lg:text-lg font-firacode text-justify pl-8 mb-5">
                     <ul className="list-inside list-disc">
                         {list.map((value) => {
                             return <li>{value}</li>
@@ -44,20 +41,16 @@ const Item: React.FC<ItemProps> = function ({
                     </a>
                 </div>
             </div>
-            <div
-                className={`w-full md:w-5/12 px-5 ${
-                    imagePosition === "right" ? "" : "md:order-first"
-                }`}
-            >
+            <div className="w-full lg:w-6/12">
                 <div className="img-container d-flex justify-center">
                     <picture>
                         <source
-                            media="(min-width: 768px)"
-                            srcSet={`/images/1080/${image}`}
+                            media="(min-width: 1024px)"
+                            srcSet={images1080[image]}
                         />
                         <source
-                            media="(max-width: 767px)"
-                            srcSet={`/images/768/${image}`}
+                            media="(max-width: 1023px)"
+                            srcSet={images768[image]}
                         />
                         <img
                             className="rounded-md object-cover square-size"

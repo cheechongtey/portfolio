@@ -6,25 +6,25 @@ import Footer from "./components/layouts/Footer"
 
 import RouteList from "./routes/Route"
 
-import "./styles/App.css"
+import "./styles/App.scss"
 
 const App: React.FC = function () {
     return (
-        <div className="App">
-            <header className="w-full font-firacode text-white">
-                <Navbar />
-            </header>
-            <main className="container mx-auto">
-                <Router>
+        <Router>
+            <div className="App relative tracking-widest leading-7">
+                <header className="w-full font-firacode text-white">
+                    <Navbar />
+                </header>
+                <main className="container mx-auto">
                     <Routes>
                         {RouteList.map(({ url, Component }) => {
                             return <Route path={url} element={<Component />} />
                         })}
                     </Routes>
-                </Router>
-            </main>
-            <Footer />
-        </div>
+                </main>
+                <Footer />
+            </div>
+        </Router>
     )
 }
 

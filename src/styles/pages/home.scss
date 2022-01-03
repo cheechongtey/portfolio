@@ -1,0 +1,117 @@
+.profile-picture {
+    position: absolute;
+    height: 650px;
+    width: 340px;
+    top: 0;
+    z-index: -1;
+    left: 50%;
+    transform: translate(-50%);
+
+    img {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+}
+
+.letter {
+    text-shadow: transparent 0 0 0, rgb(255 255 255 / 80%) 0.5px 0.5px 5px;
+}
+
+.typed-out {
+    position: relative;
+
+    &:after, &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    &:before {
+        animation: typingBefore 1s steps(15) forwards;
+
+        @apply bg-primary-dark
+    }
+
+    &:after {
+        width: 0.15em;
+    }
+}
+
+.social-media {
+    opacity: 0;
+    transform: translateY(2rem);
+    animation: fadeInUp 1.5s ease 4s forwards;
+}
+
+.section-image {
+    display: block;
+    width: 100vw;
+    height: 70vw;
+    min-height: 350px;
+    border-radius: 0.2rem;
+    overflow:hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 100vw;
+        height: 80vh;
+        max-width: 1440px;
+        max-height: 600px;
+    }
+
+    @media screen and (min-width: 1024px) {
+        width: 70vw;
+        margin-right: 2rem;
+    }
+}
+
+@keyframes typingBefore {
+    to { left: 100% }
+}
+
+@keyframes typingAfterNormal {
+    from { background: #fff }
+    90% { background: #fff }
+    to { left: 100%; }
+}
+
+@keyframes typingAfterLast {
+    from { background: #fff }
+    to { left: 100%; background: #fff }
+}
+
+@keyframes blink {
+    to { background: transparent; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@for $i from 0 through 3 {
+    .typed-out:nth-of-type(#{$i + 1}) {
+        &:after {
+            @if($i == 3){
+                animation: typingAfterLast 1s steps(15) forwards, blink 1s steps(15) infinite;
+            } @else {
+                animation: typingAfterNormal 1s steps(15) forwards;
+            }
+        }
+
+        &:before, &:after {
+            animation-delay: #{$i * 1}s;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import "./header.scss";
+@import "./components/_fullpage-nav.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@media screen and (min-width: 1024px) {
+  .square-size {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+.btn-default {
+  @apply py-3 px-5 border-2 border-button border-solid rounded text-button font-firacode 
+  text-base md:text-xl hover:text-white hover:bg-button transform transition duration-300
+}
+
+.scroll-down {
+  transition: all .3s ease-in-out;
+
+  &.hide {
+    bottom: -50px;
+    opacity: 0;
+  }
+
+  .letter {
+    @apply text-xs md:text-sm
+  }
+
+  .line {
+    @apply bg-white ml-2 w-24 h-0.5
+  }
+
+  @apply flex items-center fixed transform rotate-90 -left-24 bottom-12 md:-left-24 md:bottom-16
+}
+
+.content {
+  &.hide {
+    opacity: 0;
+    transform:translateX(-100vw);
+  }
+
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 500ms ease-in-out;
+  @apply px-8
+}
+
+@keyframes bounce {
+  0% {
+      transform: translateX(0px);
+  }
+
+  50% {
+      transform: translateX(-15px);
+  }
+
+  100% {
+      transform: translateX(0px);
+  }
+}
+
+
+

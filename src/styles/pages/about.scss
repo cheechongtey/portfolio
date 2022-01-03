@@ -1,0 +1,62 @@
+.holder {
+    max-height: 480px;
+    transform: translateY(-8rem);
+
+    @media screen and (min-width: 1024px) {
+        transform: translateY(-13.5rem);
+    }   
+}
+
+.front {
+    .bar {
+        &:after {
+            content: "";
+            position: absolute;
+            left:0;
+            transition: all 500ms ease-in-out 800ms;
+            @apply h-1 bg-tertiary
+        }
+    }
+}
+
+.back {
+    .bar {
+        &:after {
+            content: "";
+            position: absolute;
+            left:0;
+            transition: all 500ms ease-in-out 550ms;
+            @apply h-1 bg-primary-light
+        }
+    }
+}
+
+.content {
+    &.hide {
+        .front, .back {
+            .bar {
+                &:after {
+                    width: 0
+                }
+            }
+        }
+    }
+
+    &:not(.hide) {
+        .front{
+            .bar {
+                &:after {
+                    width: 65%
+                }
+            }
+        }
+
+        .back{
+            .bar {
+                &:after {
+                    width: 80%
+                }
+            }
+        }
+    }
+}

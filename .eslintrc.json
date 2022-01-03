@@ -62,7 +62,8 @@
         "global-require": 0,
         "no-var-requires": 0,
         "func-style": ["error", "expression", { "allowArrowFunctions": true }],
-        "func-names": ["error", "as-needed"]
+        "func-names": ["error", "as-needed"],
+        "@typescript-eslint/no-explicit-any": "off"
     },
     "settings": {
         "import/resolver": {

@@ -1,0 +1,17 @@
+.content {
+    &:not(.hide) {
+        .items {
+            opacity: 1
+        }
+    }
+
+    .items {
+        transition: all 200ms ease-in-out 550ms;
+    }
+
+    &.hide {
+        .items {
+            opacity: 0;
+        }
+    }
+}
