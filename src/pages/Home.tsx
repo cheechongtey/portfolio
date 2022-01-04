@@ -139,7 +139,7 @@ const Home: React.FC = function () {
                                                 className="details absolute left-5 bottom-5 lg:left-10 
                                                 lg:top-1/3 z-10"
                                             >
-                                                <h4 className="text-2xl md:text-3xl mb-2 font-bold">
+                                                <h4 className="text-2xl md:text-3xl mb-2 font-bold text-tertiary">
                                                     #Featured Work
                                                 </h4>
                                                 <div className="text-base md:text-xl mb-8">
@@ -175,7 +175,7 @@ const Home: React.FC = function () {
                                                 className="details absolute left-5 bottom-5 lg:left-10 
                                                 lg:top-1/3 z-10"
                                             >
-                                                <h4 className="text-2xl md:text-3xl mb-2 font-bold">
+                                                <h4 className="text-2xl md:text-3xl mb-2 font-bold text-tertiary">
                                                     #About Me
                                                 </h4>
                                                 <div className="text-base md:text-xl mb-8">
@@ -184,7 +184,7 @@ const Home: React.FC = function () {
                                                 </div>
                                                 <div className="project-view flex">
                                                     <Link
-                                                        to="/work"
+                                                        to="/about"
                                                         className="btn-default"
                                                         rel="noreferrer"
                                                     >
