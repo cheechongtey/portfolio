@@ -6,7 +6,7 @@ const Footer: React.FC = function () {
 
     return (
         <footer
-            className={`flex flex-row justify-center text-xs text-footer my-4  ${
+            className={`flex flex-row justify-center text-xs text-footer py-4  ${
                 pathname === "/" ? "hidden" : ""
             }`}
         >
