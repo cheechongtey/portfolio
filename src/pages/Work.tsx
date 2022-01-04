@@ -12,6 +12,10 @@ const Work: React.FC = function () {
         setShowContent(true)
     }, [])
 
+    useEffect(() => {
+        document.title = "Chee Chong - Featured Works"
+    }, [])
+
     return (
         <section
             className={`content pt-32 text-white ${showContent ? "" : "hide"}`}

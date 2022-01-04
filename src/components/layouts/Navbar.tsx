@@ -39,6 +39,7 @@ const Navbar: React.FC = function () {
                                 hover:scale-110 mb-16"
                                 rel="noreferrer"
                                 onClick={() => setExpand(!expand)}
+                                key={value.url}
                             >
                                 {value.label}
                             </Link>

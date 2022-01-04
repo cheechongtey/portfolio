@@ -5,7 +5,6 @@ import { SocialIcon } from "react-social-icons"
 
 import ScrollDown from "../components/ScrollDown"
 import workImage from "../images/1080/work-me.8e6ec8da.webp"
-import meImage from "../images/Me.jpg"
 
 import "../styles/pages/home.scss"
 
@@ -37,9 +36,12 @@ const Home: React.FC = function () {
         } else if (width >= 768 && navPosition === "bottom") {
             setNavPosition("right")
         }
-
         setShowContent(true)
     }, [width, navPosition])
+
+    useEffect(() => {
+        document.title = "Chee Chong - Home"
+    }, [])
 
     return (
         <>

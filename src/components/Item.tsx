@@ -1,7 +1,7 @@
 import React from "react"
 import images1080 from "../images/1080"
 import images768 from "../images/768"
-import { iProjectProps } from "../interface"
+import { iProjectProps } from "../type"
 
 const Item: React.FC<iProjectProps> = function ({
     title,

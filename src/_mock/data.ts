@@ -1,4 +1,4 @@
-import { iProjectProps } from "../interface"
+import { iProjectProps } from "../type"
 
 export const projectObj: iProjectProps[] = [
     {

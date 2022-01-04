@@ -20,6 +20,10 @@ const About: React.FC = function () {
         }
     }, [])
 
+    useEffect(() => {
+        document.title = "Chee Chong - About Me"
+    }, [])
+
     return (
         <section
             className={`content py-32 text-white ${showContent ? "" : "hide"}`}

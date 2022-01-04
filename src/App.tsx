@@ -18,7 +18,13 @@ const App: React.FC = function () {
                 <main className="container mx-auto">
                     <Routes>
                         {RouteList.map(({ url, Component }) => {
-                            return <Route path={url} element={<Component />} />
+                            return (
+                                <Route
+                                    path={url}
+                                    element={<Component />}
+                                    key={url}
+                                />
+                            )
                         })}
                     </Routes>
                 </main>
