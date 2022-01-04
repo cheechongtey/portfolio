@@ -27,6 +27,10 @@ module.exports = {
             wider: '.05em',
             widest: '.2em',
         },
+        backgroundColor: theme => ({
+            ...theme('colors'),
+            'primary': '#000249',
+        }),
         extend: {
             fontFamily: {
                 montserrat: ["Montserrat"],
