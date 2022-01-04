@@ -29,7 +29,8 @@ module.exports = {
         },
         backgroundColor: theme => ({
             ...theme('colors'),
-            'primary': '#000249',
+            'primary-dark': '#000249',
+            'primary-light': '#1DCED8'
         }),
         extend: {
             fontFamily: {
