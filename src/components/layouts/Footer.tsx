@@ -6,11 +6,11 @@ const Footer: React.FC = function () {
 
     return (
         <footer
-            className={`flex flex-row justify-center text-xs text-footer py-4  ${
+            className={`flex flex-row justify-center text-tertiary text-xs py-4 px-4 md:px-0 text-center ${
                 pathname === "/" ? "hidden" : ""
             }`}
         >
-            All Rights Reserved C 2021 Chee Chong
+            All Rights Reserved &copy; 2021 Chee Chong
         </footer>
     )
 }

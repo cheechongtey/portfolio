@@ -29,8 +29,8 @@ const About: React.FC = function () {
             className={`content py-32 text-white ${showContent ? "" : "hide"}`}
         >
             <div
-                className="title text-3xl md:text-4xl font-firacode text-tertiary 
-                font-bold mb-16 text-left"
+                className="title text-2xl md:text-4xl font-firacode text-tertiary 
+                font-bold mb-5 md:mb-16 text-left"
             >
                 #About Me
             </div>
@@ -57,8 +57,8 @@ const About: React.FC = function () {
             </div>
 
             <div
-                className="title text-3xl md:text-4xl font-firacode text-tertiary 
-                font-bold mb-16 mt-16 md:mt-0 text-left"
+                className="title text-2xl md:text-4xl font-firacode text-tertiary 
+                font-bold mb-5 md:mb-16 mt-16 md:mt-0 text-left"
             >
                 #Skills & Experience
             </div>
@@ -91,7 +91,7 @@ const About: React.FC = function () {
                     </div>
 
                     <div className=" flex flex-wrap mb-8 work-experience">
-                        <div className="card flex-1 bg-primary-light rounded-md mr-5">
+                        <div className="card w-full md:w-1/2 bg-primary-light rounded-md mb-5 md:mb-0 md:mr-5">
                             <div className="card-body p-5">
                                 <p className="font-bold mb-2">
                                     Fullstack Developer
@@ -103,7 +103,7 @@ const About: React.FC = function () {
                             </div>
                         </div>
 
-                        <div className="card flex-1 bg-primary-light rounded-md">
+                        <div className="card w-full md:w-1/2 bg-primary-light rounded-md">
                             <div className="card-body p-5">
                                 <p className="font-bold mb-2">
                                     Front-End Developer

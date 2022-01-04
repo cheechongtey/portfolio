@@ -21,8 +21,8 @@ const Work: React.FC = function () {
             className={`content pt-32 text-white ${showContent ? "" : "hide"}`}
         >
             <div
-                className="title text-3xl md:text-4xl font-firacode text-tertiary 
-                font-bold mb-16 text-left"
+                className="title text-2xl md:text-4xl font-firacode text-tertiary 
+                font-bold mb-5 md:mb-16 text-left"
             >
                 #Featured_Works
             </div>

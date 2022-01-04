@@ -35,7 +35,7 @@ const Navbar: React.FC = function () {
                         return (
                             <Link
                                 to={value.url}
-                                className="items text-4xl hover:text-tertiary transform transition 
+                                className="items text-2xl md:text-4xl hover:text-tertiary transform transition 
                                 hover:scale-110 mb-16"
                                 rel="noreferrer"
                                 onClick={() => setExpand(!expand)}
