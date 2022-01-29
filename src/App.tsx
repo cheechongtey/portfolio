@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 
 import Navbar from "./components/layouts/Navbar"
@@ -9,11 +9,24 @@ import RouteList from "./routes/Route"
 import "./styles/App.scss"
 
 const App: React.FC = function () {
+    const [expand, setExpand] = useState<boolean>(false)
+
+    const onClickHamburger = (state: boolean) => {
+        setExpand(state)
+    }
+
     return (
         <Router>
-            <div className="App relative tracking-widest leading-7">
+            <div
+                className={`App tracking-widest leading-7 ${
+                    expand ? "fixed" : "relative"
+                }`}
+            >
                 <header className="w-full font-firacode text-white">
-                    <Navbar />
+                    <Navbar
+                        onClickHamburger={onClickHamburger}
+                        expand={expand}
+                    />
                 </header>
                 <main className="container mx-auto">
                     <Routes>

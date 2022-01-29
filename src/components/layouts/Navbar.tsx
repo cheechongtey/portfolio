@@ -3,9 +3,10 @@ import { Link } from "react-router-dom"
 
 import { navItems } from "../../_mock/data"
 
-const Navbar: React.FC = function () {
-    const [expand, setExpand] = useState<boolean>(false)
-
+const Navbar: React.FC<{ onClickHamburger: any; expand: boolean }> = function ({
+    expand,
+    onClickHamburger,
+}) {
     return (
         <>
             <div className="navigation-bar fixed w-full z-50">
@@ -15,7 +16,7 @@ const Navbar: React.FC = function () {
                         className={`hamburger flex flex-col ${
                             expand ? "toggled" : "untoggle"
                         }`}
-                        onClick={() => setExpand(!expand)}
+                        onClick={() => onClickHamburger(!expand)}
                         tabIndex={0}
                         onKeyDown={() => null}
                     >
@@ -38,7 +39,7 @@ const Navbar: React.FC = function () {
                                 className="items text-2xl md:text-4xl hover:text-tertiary transform transition 
                                 hover:scale-110 mb-16"
                                 rel="noreferrer"
-                                onClick={() => setExpand(!expand)}
+                                onClick={() => onClickHamburger(!expand)}
                                 key={value.url}
                             >
                                 {value.label}
