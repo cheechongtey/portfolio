@@ -1,5 +1,6 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import TagManager from "react-gtm-module"
 
 import Navbar from "./components/layouts/Navbar"
 import Footer from "./components/layouts/Footer"
@@ -14,6 +15,12 @@ const App: React.FC = function () {
     const onClickHamburger = (state: boolean) => {
         setExpand(state)
     }
+
+    useEffect(() => {
+        console.log("sdfsdf")
+        TagManager.initialize({ gtmId: "GTM-TNF5SFQ" })
+        console.log(TagManager)
+    }, [])
 
     return (
         <Router>
