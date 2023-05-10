@@ -17,9 +17,7 @@ const App: React.FC = function () {
     }
 
     useEffect(() => {
-        console.log("sdfsdf")
         TagManager.initialize({ gtmId: "GTM-TNF5SFQ" })
-        console.log(TagManager)
     }, [])
 
     return (
