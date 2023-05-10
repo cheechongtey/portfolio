@@ -11,15 +11,6 @@ const About: React.FC = function () {
         TagManager.dataLayer({
             dataLayer: {
                 event: "view_item_list",
-                gtm: {
-                    uniqueEventId: 5,
-                    start: 1683699300989,
-                    allowlist: undefined,
-                    blocklist: undefined,
-                    whitelist: undefined,
-                    blacklist: undefined,
-                },
-                tagTypeBlacklist: undefined,
                 page_number: "result",
                 page_name: "/pathwaymatch/results",
                 page_link: "/pathwaymatch/results#postlogin",
@@ -90,6 +81,45 @@ const About: React.FC = function () {
             },
         })
     }
+    const onViewItem = () => {
+        TagManager.dataLayer({
+            dataLayer: {
+                event: "view_item",
+                transactionId: "6274bb6b2c2c734bc0490762_DV", 
+                transactionAffiliation: "Computing and IT_Computer Science_foundation", 
+                transactionTotal: 1, 
+                transactionProducts: [
+                    {
+                        name: "Foundation in Engineering & Science (Science)", 
+                        sku: "5a3a78bf2a2e3c51d02cc66e", 
+                        category: "Curtin, Miri", 
+                        price: 6600, 
+                        quantity: 1
+                    }
+                ], 
+            },
+        })
+    }
+
+    const onPurchase = () => {
+        TagManager.dataLayer({
+            dataLayer: {
+                event: "purchase",
+                transactionId: "6274bb6b2c2c734bc0490762_DV", 
+                transactionAffiliation: "Computing and IT_Computer Science_foundation", 
+                transactionTotal: 1, 
+                transactionProducts: [
+                    {
+                        name: "Foundation in Engineering & Science (Science)", 
+                        sku: "5a3a78bf2a2e3c51d02cc66e", 
+                        category: "Curtin, Miri", 
+                        price: 6600, 
+                        quantity: 1
+                    }
+                ], 
+            },
+        })
+    }
 
     useEffect(() => {
         const svg3DTagCloud = new SVG3DTagCloud(
@@ -119,7 +149,10 @@ const About: React.FC = function () {
                 #About Me
             </div>
             <button type="button" className="btn-default" onClick={onTriggerGA}>
-                Trigger GA4
+                Trigger GA4 - View Item List
+            </button>
+            <button type="button" className="btn-default" onClick={onTriggerGA}>
+                Trigger GA4 - View Item
             </button>
             <div className="about-me-session flex flex-wrap justify-between">
                 <div className="w-full lg:w-1/2 text-justify lg:pr-20">
