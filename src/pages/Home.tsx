@@ -46,8 +46,8 @@ const Home: React.FC = function () {
     return (
         <>
             <section className={`content ${showContent ? "" : "hide"}`}>
-                <ReactFullpage
-                    scrollingSpeed={1000} /* Options here */
+                {/* <ReactFullpage
+                    scrollingSpeed={1000}
                     navigation
                     navigationPosition="bottom"
                     onLeave={(data: any, dest: any) => {
@@ -123,13 +123,13 @@ const Home: React.FC = function () {
                                                 }}
                                             />
                                         </div>
-                                        {/* <div className="profile-picture relative">
+                                        <div className="profile-picture relative">
                                             <div className="absolute inset-0 bg-black bg-opacity-" />
                                             <img
                                                 src={meImage}
                                                 alt="profile_picture"
                                             />
-                                        </div> */}
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="section">
@@ -208,7 +208,7 @@ const Home: React.FC = function () {
                             </ReactFullpage.Wrapper>
                         )
                     }}
-                />
+                /> */}
             </section>
             <ScrollDown showScroll={showScroll} />
         </>
