@@ -199,11 +199,13 @@ const About: React.FC = function () {
                 ecommerce: null,
             },
         })
+        const event = new Date()
+
         TagManager.dataLayer({
             dataLayer: {
                 event: "purchase",
                 ecommerce: {
-                    transaction_id: "T_1sdfsdfsdf",
+                    transaction_id: `T_1sdfsdfsdf${event.toISOString()}`,
                     value: 25.42,
                     tax: 4.9,
                     shipping: 5.99,
