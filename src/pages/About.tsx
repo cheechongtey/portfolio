@@ -20,6 +20,7 @@ const About: React.FC = function () {
                 value: "139921.00",
             },
         })
+        alert("Triggered generate_lead")
     }
     const onTriggerViewPageList = () => {
         TagManager.dataLayer({
@@ -169,6 +170,8 @@ const About: React.FC = function () {
                 },
             },
         })
+
+        alert("Triggered view_item_list")
     }
     const onTriggerViewPage = () => {
         TagManager.dataLayer({
@@ -205,6 +208,7 @@ const About: React.FC = function () {
                 },
             },
         })
+        alert("Triggered view_item")
     }
 
     const onPurchase = () => {
@@ -248,6 +252,7 @@ const About: React.FC = function () {
                 },
             },
         })
+        alert("Triggered purchase")
     }
 
     useEffect(() => {
