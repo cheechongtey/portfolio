@@ -7,96 +7,178 @@ import "../styles/pages/about.scss"
 
 const About: React.FC = function () {
     const [showContent, setShowContent] = useState<boolean>(false)
-    const onTriggerGA = () => {
+    const onTriggerViewPageList = () => {
         TagManager.dataLayer({
             dataLayer: {
                 event: "view_item_list",
-                page_number: "result",
-                page_name: "/pathwaymatch/results",
-                page_link: "/pathwaymatch/results#postlogin",
-                transactionId: "6274bb6b2c2c734bc0490762",
-                transactionAffiliation:
-                    "Computing and IT_Computer Science_foundation",
-                transactionTotal: 8,
-                transactionProducts: [
-                    {
-                        name:
-                            "FOUNDATION PROGRAMME (Computing & Technology Pathway) - " +
-                            "Computer Science",
-                        sku: "5dbfda152c2c7363610cb1c2",
-                        category: "APU, Technology Park Malaysia Campus",
-                        price: 13200,
-                        quantity: 1,
-                    },
-                    {
-                        name: "Foundation in Engineering & Science (Science)",
-                        sku: "5a3a78bf2a2e3c51d02cc66e",
-                        category: "Curtin, Miri",
-                        price: 7100,
-                        quantity: 1,
-                    },
-                    {
-                        name: "Computer Science Foundation Year (CSFY)",
-                        sku: "5ffebdca2c2c734db770e552",
-                        category: "Southampton, EduCity Iskandar",
-                        price: 0,
-                        quantity: 1,
-                    },
-                    {
-                        name: "Foundation in Arts (Computer Science)",
-                        sku: "60c1f0e32c2c73302a776183",
-                        category: "SEGi, Kota Damansara",
-                        price: 7462,
-                        quantity: 1,
-                    },
-                    {
-                        name: "Foundation in Information Technology (Computer Science)",
-                        sku: "5dc180eb2c2c73652856ede2",
-                        category: "MMU, Cyberjaya",
-                        price: 13970,
-                        quantity: 1,
-                    },
-                    {
-                        name: "Foundation in Information Technology (Computer Science)",
-                        sku: "60c8bb412c2c73190e1446f3",
-                        category: "MMU, Ayer Keroh",
-                        price: 13970,
-                        quantity: 1,
-                    },
-                    {
-                        name: "Foundation in Science (Applied Sciences)",
-                        sku: "5c0f31be2c2c7333de3476fd",
-                        category: "UCSI, Kuching",
-                        price: 18582,
-                        quantity: 1,
-                    },
-                    {
-                        name: " Foundation in Science",
-                        sku: "5f153d212c2c7339ac0ab4f4",
-                        category: "QIUP, Ipoh",
-                        price: 2300,
-                        quantity: 1,
-                    },
-                ],
+                ecommerce: {
+                    item_list_id: "6274bb6b2c2c734bc0490762",
+                    item_list_name:
+                        "Computing and IT_Computer Science_foundation",
+                    items: [
+                        {
+                            item_id: "5a3a79cd2a2e3c51d02ccbd6",
+                            item_name: "Taylor's University",
+                            discount: 300,
+                            index: 0,
+                            item_brand: "Taylor's University",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 26000,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5a8ce792373051730d7b65f2",
+                            item_name: "Multimedia University (MMU)",
+                            discount: 300,
+                            index: 1,
+                            item_brand: "Multimedia University (MMU)",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 11470,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5a8ce94a3730517410771122",
+                            item_name: "Multimedia University (MMU)",
+                            discount: 300,
+                            index: 2,
+                            item_brand: "Multimedia University (MMU)",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 12970,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5a3a789a2a2e3c51d02cc584",
+                            item_name:
+                                "Asia Pacific University of Technology & Innovation (APU)",
+                            discount: 12900,
+                            index: 3,
+                            item_brand:
+                                "Asia Pacific University of Technology & Innovation (APU)",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 13200,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5a3a79202a2e3c51d02cc808",
+                            item_name: "International Medical University (IMU)",
+                            discount: 300,
+                            index: 4,
+                            item_brand:
+                                "International Medical University (IMU)",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 25350,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5a3a78eb2a2e3c51d02cc6ec",
+                            item_name: "HELP University & Colleges",
+                            discount: 25875,
+                            index: 5,
+                            item_brand: "HELP University & Colleges",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 9825,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5a3a78fa2a2e3c51d02cc786",
+                            item_name: "HELP University & Colleges",
+                            discount: 25875,
+                            index: 6,
+                            item_brand: "HELP University & Colleges",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 9825,
+                            quantity: 1,
+                        },
+                        {
+                            item_id: "5ef2c8702c2c73568f7b58f2",
+                            item_name: "Quest International University Perak",
+                            index: 7,
+                            item_brand: "Quest International University Perak",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "campus_list",
+                            price: 2300,
+                            quantity: 1,
+                        },
+                    ],
+                },
             },
         })
     }
-    const onViewItem = () => {
+    const onTriggerViewPage = () => {
         TagManager.dataLayer({
             dataLayer: {
                 event: "view_item",
-                transactionId: "6274bb6b2c2c734bc0490762_DV", 
-                transactionAffiliation: "Computing and IT_Computer Science_foundation", 
-                transactionTotal: 1, 
-                transactionProducts: [
-                    {
-                        name: "Foundation in Engineering & Science (Science)", 
-                        sku: "5a3a78bf2a2e3c51d02cc66e", 
-                        category: "Curtin, Miri", 
-                        price: 6600, 
-                        quantity: 1
-                    }
-                ], 
+                ecommerce: {
+                    currency: "MYR",
+                    value: "RM 13200",
+                    item: [
+                        {
+                            item_id: "5dbfda152c2c7363610cb1c2",
+                            item_name:
+                                "FOUNDATION PROGRAMME (Computing & Technology Pathway) - Computer Science",
+                            discount: 12700,
+                            index: 0,
+                            item_brand:
+                                "Asia Pacific University of Technology & Innovation (APU)",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "course_list",
+                            price: 13200,
+                            quantity: 1,
+                        },
+                    ],
+                },
             },
         })
     }
@@ -104,19 +186,35 @@ const About: React.FC = function () {
     const onPurchase = () => {
         TagManager.dataLayer({
             dataLayer: {
-                event: "purchase",
-                transactionId: "6274bb6b2c2c734bc0490762_DV", 
-                transactionAffiliation: "Computing and IT_Computer Science_foundation", 
-                transactionTotal: 1, 
-                transactionProducts: [
-                    {
-                        name: "Foundation in Engineering & Science (Science)", 
-                        sku: "5a3a78bf2a2e3c51d02cc66e", 
-                        category: "Curtin, Miri", 
-                        price: 6600, 
-                        quantity: 1
-                    }
-                ], 
+                event: "view_item",
+                ecommerce: {
+                    transaction_id: "T_12345",
+                    value: 25.42,
+                    tax: 4.9,
+                    shipping: 5.99,
+                    currency: "MYR",
+                    coupon: "SUMMER_SALE",
+                    item: [
+                        {
+                            item_id: "5dbfda152c2c7363610cb1c2",
+                            item_name:
+                                "FOUNDATION PROGRAMME (Computing & Technology Pathway) - Computer Science",
+                            discount: 12700,
+                            index: 0,
+                            item_brand:
+                                "Asia Pacific University of Technology & Innovation (APU)",
+                            item_category: "Computing and IT",
+                            item_category2: "Computer Science",
+                            item_category3: "Foundation",
+                            item_category4: "",
+                            item_category5: "",
+                            item_list_id: "",
+                            item_list_name: "course_list",
+                            price: 13200,
+                            quantity: 1,
+                        },
+                    ],
+                },
             },
         })
     }
@@ -148,14 +246,31 @@ const About: React.FC = function () {
             >
                 #About Me
             </div>
-            <button type="button" className="btn-default" onClick={onTriggerGA}>
-                Trigger GA4 - View Item List
-            </button>
-            <button type="button" className="btn-default" onClick={onTriggerGA}>
-                Trigger GA4 - View Item
-            </button>
             <div className="about-me-session flex flex-wrap justify-between">
                 <div className="w-full lg:w-1/2 text-justify lg:pr-20">
+                    <div className="flex gap-4 mb-10">
+                        <button
+                            type="button"
+                            className="btn-default"
+                            onClick={onTriggerViewPageList}
+                        >
+                            Trigger GA4 - View Item List
+                        </button>
+                        <button
+                            type="button"
+                            className="btn-default"
+                            onClick={onTriggerViewPage}
+                        >
+                            Trigger GA4 - View Item
+                        </button>
+                        <button
+                            type="button"
+                            className="btn-default"
+                            onClick={onPurchase}
+                        >
+                            Trigger GA4 - Purchase
+                        </button>
+                    </div>
                     <p className="mb-8">
                         I&apos;m a Front-End Developer located in Kuala Lumpur,
                         Malaysia. I have passionate for UI effects, animations
@@ -175,14 +290,12 @@ const About: React.FC = function () {
                     <div id="holder" />
                 </div>
             </div>
-
             <div
                 className="title text-2xl md:text-4xl font-firacode text-tertiary 
                 font-bold mb-5 md:mb-16 mt-16 md:mt-0 text-left"
             >
                 #Skills & Experience
             </div>
-
             <div className="skill-session flex flex-wrap justify-between">
                 <div className="w-full lg:w-1/2 text-justify lg:pr-20 mb-14 md:mb-0">
                     <p className="mb-8">
