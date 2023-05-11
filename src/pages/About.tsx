@@ -186,7 +186,7 @@ const About: React.FC = function () {
     const onPurchase = () => {
         TagManager.dataLayer({
             dataLayer: {
-                event: "view_item",
+                event: "purchase",
                 ecommerce: {
                     transaction_id: "T_12345",
                     value: 25.42,
