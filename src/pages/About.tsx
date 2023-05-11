@@ -9,6 +9,9 @@ const About: React.FC = function () {
     const [showContent, setShowContent] = useState<boolean>(false)
     const onTriggerViewPageList = () => {
         TagManager.dataLayer({
+            dataLayer: {},
+        })
+        TagManager.dataLayer({
             dataLayer: {
                 event: "view_item_list",
                 ecommerce: {
@@ -153,6 +156,9 @@ const About: React.FC = function () {
     }
     const onTriggerViewPage = () => {
         TagManager.dataLayer({
+            dataLayer: {},
+        })
+        TagManager.dataLayer({
             dataLayer: {
                 event: "view_item",
                 ecommerce: {
@@ -184,6 +190,9 @@ const About: React.FC = function () {
     }
 
     const onPurchase = () => {
+        TagManager.dataLayer({
+            dataLayer: {},
+        })
         TagManager.dataLayer({
             dataLayer: {
                 event: "purchase",
