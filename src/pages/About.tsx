@@ -168,7 +168,7 @@ const About: React.FC = function () {
                 ecommerce: {
                     currency: "MYR",
                     value: "RM 13200",
-                    item: [
+                    items: [
                         {
                             item_id: "5dbfda152c2c7363610cb1c2",
                             item_name:
@@ -209,7 +209,7 @@ const About: React.FC = function () {
                     shipping: 5.99,
                     currency: "MYR",
                     coupon: "SUMMER_SALE",
-                    item: [
+                    items: [
                         {
                             item_id: "5dbfda152c2c7363610cb1c2",
                             item_name:
