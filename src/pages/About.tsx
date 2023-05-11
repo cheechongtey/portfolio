@@ -7,6 +7,20 @@ import "../styles/pages/about.scss"
 
 const About: React.FC = function () {
     const [showContent, setShowContent] = useState<boolean>(false)
+    const onGenerateLead = () => {
+        TagManager.dataLayer({
+            dataLayer: {
+                ecommerce: null,
+            },
+        })
+        TagManager.dataLayer({
+            dataLayer: {
+                event: "generate_lead",
+                currency: "MYR",
+                value: "139921.00",
+            },
+        })
+    }
     const onTriggerViewPageList = () => {
         TagManager.dataLayer({
             dataLayer: {
@@ -286,6 +300,13 @@ const About: React.FC = function () {
                             onClick={onPurchase}
                         >
                             Trigger GA4 - Purchase
+                        </button>
+                        <button
+                            type="button"
+                            className="btn-default"
+                            onClick={onGenerateLead}
+                        >
+                            Trigger GA4 - Generate Lead
                         </button>
                     </div>
                     <p className="mb-8">
