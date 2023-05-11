@@ -203,7 +203,7 @@ const About: React.FC = function () {
             dataLayer: {
                 event: "purchase",
                 ecommerce: {
-                    transaction_id: "T_12345",
+                    transaction_id: "T_1sdfsdfsdf",
                     value: 25.42,
                     tax: 4.9,
                     shipping: 5.99,
