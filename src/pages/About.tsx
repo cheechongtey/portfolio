@@ -7,208 +7,208 @@ import "../styles/pages/about.scss"
 
 const About: React.FC = function () {
     const [showContent, setShowContent] = useState<boolean>(false)
-    const onGenerateLead = () => {
-        TagManager.dataLayer({
-            dataLayer: {
-                ecommerce: null,
-            },
-        })
-        TagManager.dataLayer({
-            dataLayer: {
-                event: "generate_lead",
-                currency: "MYR",
-                value: "139921.00",
-            },
-        })
-        alert("Triggered generate_lead")
-    }
-    const onTriggerViewPageList = () => {
-        // TagManager.dataLayer({
-        //     dataLayer: {
-        //         ecommerce: null,
-        //     },
-        // })
-        // TagManager.dataLayer({
-        //     dataLayer: {
-        //         event: "view_item_list",
-        //         ecommerce: {
-        //             item_list_id: "6274bb6b2c2c734bc0490762",
-        //             item_list_name:
-        //                 "Computing and IT_Computer Science_foundation",
-        //             items: [
-        //                 {
-        //                     item_id: "5a3a79cd2a2e3c51d02ccbd6",
-        //                     item_name: "Taylor's University",
-        //                     discount: 300,
-        //                     index: 0,
-        //                     item_brand: "Taylor's University",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 26000,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5a8ce792373051730d7b65f2",
-        //                     item_name: "Multimedia University (MMU)",
-        //                     discount: 300,
-        //                     index: 1,
-        //                     item_brand: "Multimedia University (MMU)",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 11470,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5a8ce94a3730517410771122",
-        //                     item_name: "Multimedia University (MMU)",
-        //                     discount: 300,
-        //                     index: 2,
-        //                     item_brand: "Multimedia University (MMU)",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 12970,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5a3a789a2a2e3c51d02cc584",
-        //                     item_name:
-        //                         "Asia Pacific University of Technology & Innovation (APU)",
-        //                     discount: 12900,
-        //                     index: 3,
-        //                     item_brand:
-        //                         "Asia Pacific University of Technology & Innovation (APU)",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 13200,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5a3a79202a2e3c51d02cc808",
-        //                     item_name: "International Medical University (IMU)",
-        //                     discount: 300,
-        //                     index: 4,
-        //                     item_brand:
-        //                         "International Medical University (IMU)",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 25350,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5a3a78eb2a2e3c51d02cc6ec",
-        //                     item_name: "HELP University & Colleges",
-        //                     discount: 25875,
-        //                     index: 5,
-        //                     item_brand: "HELP University & Colleges",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 9825,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5a3a78fa2a2e3c51d02cc786",
-        //                     item_name: "HELP University & Colleges",
-        //                     discount: 25875,
-        //                     index: 6,
-        //                     item_brand: "HELP University & Colleges",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 9825,
-        //                     quantity: 1,
-        //                 },
-        //                 {
-        //                     item_id: "5ef2c8702c2c73568f7b58f2",
-        //                     item_name: "Quest International University Perak",
-        //                     index: 7,
-        //                     item_brand: "Quest International University Perak",
-        //                     item_category: "Computing and IT",
-        //                     item_category2: "Computer Science",
-        //                     item_category3: "Foundation",
-        //                     item_category4: "",
-        //                     item_category5: "",
-        //                     item_list_id: "",
-        //                     item_list_name: "campus_list",
-        //                     price: 2300,
-        //                     quantity: 1,
-        //                 },
-        //             ],
-        //         },
-        //     },
-        // })
-        // alert("Triggered view_item_list")
-    }
-    const onTriggerViewPage = () => {
-        TagManager.dataLayer({
-            dataLayer: {
-                ecommerce: null,
-            },
-        })
-        TagManager.dataLayer({
-            dataLayer: {
-                event: "view_item",
-                ecommerce: {
-                    currency: "MYR",
-                    value: "RM 13200",
-                    items: [
-                        {
-                            item_id: "5dbfda152c2c7363610cb1c2",
-                            item_name:
-                                "FOUNDATION PROGRAMME (Computing & Technology Pathway) - Computer Science",
-                            discount: 12700,
-                            index: 0,
-                            item_brand:
-                                "Asia Pacific University of Technology & Innovation (APU)",
-                            item_category: "Computing and IT",
-                            item_category2: "Computer Science",
-                            item_category3: "Foundation",
-                            item_category4: "",
-                            item_category5: "",
-                            item_list_id: "",
-                            item_list_name: "course_list",
-                            price: 13200,
-                            quantity: 1,
-                        },
-                    ],
-                },
-            },
-        })
-        alert("Triggered view_item")
-    }
+    // const onGenerateLead = () => {
+    //     TagManager.dataLayer({
+    //         dataLayer: {
+    //             ecommerce: null,
+    //         },
+    //     })
+    //     TagManager.dataLayer({
+    //         dataLayer: {
+    //             event: "generate_lead",
+    //             currency: "MYR",
+    //             value: "139921.00",
+    //         },
+    //     })
+    //     alert("Triggered generate_lead")
+    // }
+    // const onTriggerViewPageList = () => {
+    //     // TagManager.dataLayer({
+    //     //     dataLayer: {
+    //     //         ecommerce: null,
+    //     //     },
+    //     // })
+    //     // TagManager.dataLayer({
+    //     //     dataLayer: {
+    //     //         event: "view_item_list",
+    //     //         ecommerce: {
+    //     //             item_list_id: "6274bb6b2c2c734bc0490762",
+    //     //             item_list_name:
+    //     //                 "Computing and IT_Computer Science_foundation",
+    //     //             items: [
+    //     //                 {
+    //     //                     item_id: "5a3a79cd2a2e3c51d02ccbd6",
+    //     //                     item_name: "Taylor's University",
+    //     //                     discount: 300,
+    //     //                     index: 0,
+    //     //                     item_brand: "Taylor's University",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 26000,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5a8ce792373051730d7b65f2",
+    //     //                     item_name: "Multimedia University (MMU)",
+    //     //                     discount: 300,
+    //     //                     index: 1,
+    //     //                     item_brand: "Multimedia University (MMU)",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 11470,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5a8ce94a3730517410771122",
+    //     //                     item_name: "Multimedia University (MMU)",
+    //     //                     discount: 300,
+    //     //                     index: 2,
+    //     //                     item_brand: "Multimedia University (MMU)",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 12970,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5a3a789a2a2e3c51d02cc584",
+    //     //                     item_name:
+    //     //                         "Asia Pacific University of Technology & Innovation (APU)",
+    //     //                     discount: 12900,
+    //     //                     index: 3,
+    //     //                     item_brand:
+    //     //                         "Asia Pacific University of Technology & Innovation (APU)",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 13200,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5a3a79202a2e3c51d02cc808",
+    //     //                     item_name: "International Medical University (IMU)",
+    //     //                     discount: 300,
+    //     //                     index: 4,
+    //     //                     item_brand:
+    //     //                         "International Medical University (IMU)",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 25350,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5a3a78eb2a2e3c51d02cc6ec",
+    //     //                     item_name: "HELP University & Colleges",
+    //     //                     discount: 25875,
+    //     //                     index: 5,
+    //     //                     item_brand: "HELP University & Colleges",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 9825,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5a3a78fa2a2e3c51d02cc786",
+    //     //                     item_name: "HELP University & Colleges",
+    //     //                     discount: 25875,
+    //     //                     index: 6,
+    //     //                     item_brand: "HELP University & Colleges",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 9825,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //                 {
+    //     //                     item_id: "5ef2c8702c2c73568f7b58f2",
+    //     //                     item_name: "Quest International University Perak",
+    //     //                     index: 7,
+    //     //                     item_brand: "Quest International University Perak",
+    //     //                     item_category: "Computing and IT",
+    //     //                     item_category2: "Computer Science",
+    //     //                     item_category3: "Foundation",
+    //     //                     item_category4: "",
+    //     //                     item_category5: "",
+    //     //                     item_list_id: "",
+    //     //                     item_list_name: "campus_list",
+    //     //                     price: 2300,
+    //     //                     quantity: 1,
+    //     //                 },
+    //     //             ],
+    //     //         },
+    //     //     },
+    //     // })
+    //     // alert("Triggered view_item_list")
+    // }
+    // const onTriggerViewPage = () => {
+    //     TagManager.dataLayer({
+    //         dataLayer: {
+    //             ecommerce: null,
+    //         },
+    //     })
+    //     TagManager.dataLayer({
+    //         dataLayer: {
+    //             event: "view_item",
+    //             ecommerce: {
+    //                 currency: "MYR",
+    //                 value: "RM 13200",
+    //                 items: [
+    //                     {
+    //                         item_id: "5dbfda152c2c7363610cb1c2",
+    //                         item_name:
+    //                             "FOUNDATION PROGRAMME (Computing & Technology Pathway) - Computer Science",
+    //                         discount: 12700,
+    //                         index: 0,
+    //                         item_brand:
+    //                             "Asia Pacific University of Technology & Innovation (APU)",
+    //                         item_category: "Computing and IT",
+    //                         item_category2: "Computer Science",
+    //                         item_category3: "Foundation",
+    //                         item_category4: "",
+    //                         item_category5: "",
+    //                         item_list_id: "",
+    //                         item_list_name: "course_list",
+    //                         price: 13200,
+    //                         quantity: 1,
+    //                     },
+    //                 ],
+    //             },
+    //         },
+    //     })
+    //     alert("Triggered view_item")
+    // }
     const onFirstTime = () => {
         TagManager.dataLayer({
             dataLayer: {
@@ -223,49 +223,49 @@ const About: React.FC = function () {
         alert("Triggered firsttime")
     }
 
-    const onPurchase = () => {
-        TagManager.dataLayer({
-            dataLayer: {
-                ecommerce: null,
-            },
-        })
-        const event = new Date()
+    // const onPurchase = () => {
+    //     TagManager.dataLayer({
+    //         dataLayer: {
+    //             ecommerce: null,
+    //         },
+    //     })
+    //     const event = new Date()
 
-        TagManager.dataLayer({
-            dataLayer: {
-                event: "purchase",
-                ecommerce: {
-                    transaction_id: `T_1sdfsdfsdf${event.toISOString()}`,
-                    value: 25.42,
-                    tax: 4.9,
-                    shipping: 5.99,
-                    currency: "MYR",
-                    coupon: "SUMMER_SALE",
-                    items: [
-                        {
-                            item_id: "5dbfda152c2c7363610cb1c2",
-                            item_name:
-                                "FOUNDATION PROGRAMME (Computing & Technology Pathway) - Computer Science",
-                            discount: 12700,
-                            index: 0,
-                            item_brand:
-                                "Asia Pacific University of Technology & Innovation (APU)",
-                            item_category: "Computing and IT",
-                            item_category2: "Computer Science",
-                            item_category3: "Foundation",
-                            item_category4: "",
-                            item_category5: "",
-                            item_list_id: "",
-                            item_list_name: "course_list",
-                            price: 13200,
-                            quantity: 1,
-                        },
-                    ],
-                },
-            },
-        })
-        alert("Triggered purchase")
-    }
+    //     TagManager.dataLayer({
+    //         dataLayer: {
+    //             event: "purchase",
+    //             ecommerce: {
+    //                 transaction_id: `T_1sdfsdfsdf${event.toISOString()}`,
+    //                 value: 25.42,
+    //                 tax: 4.9,
+    //                 shipping: 5.99,
+    //                 currency: "MYR",
+    //                 coupon: "SUMMER_SALE",
+    //                 items: [
+    //                     {
+    //                         item_id: "5dbfda152c2c7363610cb1c2",
+    //                         item_name:
+    //                             "FOUNDATION PROGRAMME (Computing & Technology Pathway) - Computer Science",
+    //                         discount: 12700,
+    //                         index: 0,
+    //                         item_brand:
+    //                             "Asia Pacific University of Technology & Innovation (APU)",
+    //                         item_category: "Computing and IT",
+    //                         item_category2: "Computer Science",
+    //                         item_category3: "Foundation",
+    //                         item_category4: "",
+    //                         item_category5: "",
+    //                         item_list_id: "",
+    //                         item_list_name: "course_list",
+    //                         price: 13200,
+    //                         quantity: 1,
+    //                     },
+    //                 ],
+    //             },
+    //         },
+    //     })
+    //     alert("Triggered purchase")
+    // }
 
     useEffect(() => {
         const svg3DTagCloud = new SVG3DTagCloud(
